@@ -1,10 +1,14 @@
 // ocupen el comando “rafce” para crear el componente.
 import React from 'react';
-import "../styles/global.scss";
+import Layout from '../Containers/Layout';
+import Login from '../Containers/Login';
+import "../styles/global.css";
 
 const App = () => {
     return (
-        <h1>Hola Mundo! :D</h1>
+        <Layout>
+            <Login/>
+        </Layout>
     )
 }
 
