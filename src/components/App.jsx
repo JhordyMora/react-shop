@@ -2,12 +2,14 @@
 import React from 'react';
 import Layout from '../Containers/Layout';
 import Login from '../Containers/Login';
+import RecoveryPassword from '../Containers/RecoveryPassword'
 import "../styles/global.css";
 
 const App = () => {
     return (
         <Layout>
             <Login/>
+            <RecoveryPassword/>
         </Layout>
     )
 }
