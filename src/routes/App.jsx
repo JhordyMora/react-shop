@@ -2,32 +2,44 @@
 import React from 'react';
 import { BrowserRouter, Routes, Switch, Route } from 'react-router-dom';
 import Layout from '../Containers/Layout';
-import Login from '../Containers/Login';
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import RecoveryPassword from '../Containers/RecoveryPassword';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
+import PasswordRecovery from '../pages/PasswordRecovery';
+import SendEmail from '../pages/SendEmail';
+import NewPassword from '../pages/NewPassword';
+import MyAccount from '../pages/MyAccount';
+import CreateAccount from '../pages/CreateAccount';
+import Checkout from '../pages/Checkout';
+import Orders from '../pages/Orders';
+import NotFound from '../pages/NotFound';
 import "../styles/global.css";
 
 const App = () => {
     return (
         //Manera de hacer en versiones antiguas
         // <BrowserRouter>
-        // <Switch> //en vez de Routes
-        //     <Layout>
+        // <Layout>
+        //      <Switch> //en vez de Routes
         //         <Route exact path='/' component={Home}/> //se usaba component en vez de element
         //         <Route exact path='/Login' component={Login}/>
         //         <Route exact path='recovery-password' component={RecoveryPassword}/>
         //         <Route component={NotFound}/>
-        //     </Layout>
-        // </Switch> 
+        //     </Switch>
+        // </Layout> 
         // </BrowserRouter>
         <BrowserRouter>
         <Layout>
             <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/login" element={<Login />} />			
-                <Route exact path="/recovery-password" element={<RecoveryPassword />} />
-                <Route path="*" element={<NotFound />} />
+                    <Route exact path="/" component={Home} />
+					<Route exact path="/login" component={Login} />
+					<Route exact path="/password-recovery" component={PasswordRecovery} />
+					<Route exact path="/send-email" component={SendEmail} />
+					<Route exact path="/new-password" component={NewPassword} />
+					<Route exact path="/account" component={MyAccount} />
+					<Route exact path="/signup" component={CreateAccount} />
+					<Route exact path="/checkout" component={Checkout} />
+					<Route exact path="/orders" component={Orders} />
+					<Route path="*" component={NotFound} />
             </Routes>
         </Layout>
         </BrowserRouter>    
