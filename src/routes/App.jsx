@@ -3,19 +3,21 @@ import React from 'react';
 import { BrowserRouter, Routes, Switch, Route } from 'react-router-dom';
 import Layout from '../Containers/Layout';
 import Login from '../Containers/Login';
-import RecoveryPassword from '../Containers/RecoveryPassword'
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+import RecoveryPassword from '../Containers/RecoveryPassword';
 import "../styles/global.css";
 
 const App = () => {
     return (
-        // Manera de hacer en versiones antiguas
+        //Manera de hacer en versiones antiguas
         // <BrowserRouter>
-        // <Switch> en vez de Routes
+        // <Switch> //en vez de Routes
         //     <Layout>
-        //         <Route exact path='/' component={Home}/> se usaba component en vez de element
+        //         <Route exact path='/' component={Home}/> //se usaba component en vez de element
         //         <Route exact path='/Login' component={Login}/>
         //         <Route exact path='recovery-password' component={RecoveryPassword}/>
-        //         <Route component={Not Found}/>
+        //         <Route component={NotFound}/>
         //     </Layout>
         // </Switch> 
         // </BrowserRouter>
@@ -28,7 +30,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Layout>
-        </BrowserRouter>   
+        </BrowserRouter>    
     )
 }
 
