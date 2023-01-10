@@ -14,11 +14,11 @@ module.exports = {
     resolve:{
         extensions: [".js",".jsx"],
         alias: {
-            "@components": path.resolve(__dirname, "src/components"),
-            "@containers": path.resolve(__dirname, "src/Containers"),
-            "@styles": path.resolve(__dirname, "src/styles"),
-            "@icons": path.resolve(__dirname, "./src/assets/icons"),
-            "@logos": path.resolve(__dirname, "./src/assets/logos"),
+            "@components": path.resolve(__dirname, "src/components/"),
+            "@containers": path.resolve(__dirname, "src/Containers/"),
+            "@styles": path.resolve(__dirname, "src/styles/"),
+            "@icons": path.resolve(__dirname, "./src/assets/icons/"),
+            "@logos": path.resolve(__dirname, "./src/assets/logos/"),
         }
     },
     module: {
@@ -43,7 +43,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: './src/assets',
+                type: 'assets',
             }
         ]
     },
