@@ -46,7 +46,7 @@ module.exports = {
                 // type: 'assets',
                 use: [
                     {
-                        loader: ['svg-url-loader','file-loader'],
+                        loader: 'file-loader',//['svg-url-loader','file-loader'],
                         options: {
                             limit: 10000,
                         }
