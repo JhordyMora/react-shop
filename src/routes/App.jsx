@@ -31,7 +31,7 @@ const App = () => {
         // </Layout> 
         // </BrowserRouter>
         <AppContext.Provider value={initialState}>
-            <HashRouter basename='/react-shop'>
+            <BrowserRouter basename='/react-shop'>
                 <Layout>
                     <Routes>
                             <Route exact path="/" element={<Home/>} />
@@ -46,7 +46,7 @@ const App = () => {
                             <Route path="*" element={<NotFound/>} />
                     </Routes>
                 </Layout>
-            </HashRouter>
+            </BrowserRouter>
         </AppContext.Provider>    
     )
 }
