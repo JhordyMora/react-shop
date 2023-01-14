@@ -1,6 +1,6 @@
 // ocupen el comando “rafce” para crear el componente.
 import React from 'react';
-import { BrowserRouter, Routes, HashRouter , Route } from 'react-router-dom';
+import { BrowserRouter, Routes , Route } from 'react-router-dom';
 import Layout from '../Containers/Layout';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
