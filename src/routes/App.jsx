@@ -1,6 +1,6 @@
 // ocupen el comando “rafce” para crear el componente.
 import React from 'react';
-import { BrowserRouter, Routes, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, HashRouter , Route } from 'react-router-dom';
 import Layout from '../Containers/Layout';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
@@ -31,7 +31,7 @@ const App = () => {
         // </Layout> 
         // </BrowserRouter>
         <AppContext.Provider value={initialState}>
-            <BrowserRouter basename='/react-shop'>
+            <HashRouter basename='/react-shop'>
                 <Layout>
                     <Routes>
                             <Route exact path="/" element={<Home/>} />
@@ -46,7 +46,7 @@ const App = () => {
                             <Route path="*" element={<NotFound/>} />
                     </Routes>
                 </Layout>
-            </BrowserRouter>
+            </HashRouter>
         </AppContext.Provider>    
     )
 }
